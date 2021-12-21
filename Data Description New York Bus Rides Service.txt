@@ -1,0 +1,36 @@
+# Judul Dataset :
+New York Bus Rides service
+
+# Deskripsi :
+Dataset ini merupakan record dari pemesanan jasa transportasi di New York, dimana rute perjalanan telah ditentukan. Pelanggan dapat memesan dalam kurun waktu tertentu sesuai dengan kebutuhan mereka. Yang dibutuhkan dalam proses pemesanan ini adalah memasukkan lokasi penjemputan dan pengantaran, dan data akan terecord ketika pelanggan sudah melakukan mengklik tombol check-out dalam website.
+
+# Detail Attribut :
+bookings
+- search_session_id: Sesi pencarian sesuai dengan pemesanan perjalanan
+- booking_id: ID pemesanan
+- booking_timestamp: Waktu Pemesanan
+
+searches
+- session_id: Sesi pencarian
+- search_id: Kode unik pencarian dalam setiap sesi
+- user_id: ID pelanggan
+- search_city: Kota tempat pencarian dilakukan
+- search_time: Waktu lokal dar pencarian
+- num_of_results: Jumlah hasil dari pencarian
+- is_result: Status dari pencarian apakah memberikan hasil atau tidak
+- median_pickup_walk_time: Perkiraan waktu yang dibutuhkan pelanggan untuk berjalan dari lokasi penjemputan yang diinginkan ke stasiun bus
+- median_dropoff_walk_time: Perkiraan waktu yang dibutuhkan pelanggan untuk berjalan kaki dari stasiun bus tujuan yang diinginkan
+- median_bus_travel_time: Perkiraan waktu tempuh bus dalam perjalanan
+- high_demand_val: Menunjukkan jumlah kursi yang tersisa
+- user_device_os: Platform perangkat seluler
+- user_device_app_version: Nomor versi aplikasi
+
+Segments
+- yr_wk : Record waktu
+- user_id : ID pelanggan
+- new_segment_tag : Keterangan hasil segmentasi pelanggan. Berikut penjelasan detailnya
+weeklyusersegment: Segmen pengguna mingguan berdasarkan riwayat pemesanan sebelumnya
+Retained users: Melakukan pemesanan dalam 4 minggu terakhir
+New users: Melakukan pemesanan untuk pertama kalinya dalam minggu ini
+Inactive users: Telah melakukan pemesanan dalam 6 bulan terakhir tetapi tidak ada pemesanan dalam 4 minggu terakhir
+Explorers: Belum pernah melakukan pemesanan
